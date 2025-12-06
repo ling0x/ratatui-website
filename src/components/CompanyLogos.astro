@@ -11,9 +11,10 @@ import vercel_white from "@assets/companies/vercel-logotype-white.svg";
 import vercel_black from "@assets/companies/vercel-logotype-black.svg";
 import hugging_face_white from "@assets/companies/hf-logo-with-white-title.svg";
 import hugging_face_black from "@assets/companies/hf-logo-with-black-title.svg";
-import gitbutler_white from "@assets/companies/gitbutler-logo-white.png";
-import gitbutler_black from "@assets/companies/gitbutler-logo-black.png";
-import electronic_arts from "@assets/companies/electronic-arts-logo.png";
+import gitbutler_white from "@assets/companies/gitbutler-logo-white.svg";
+import gitbutler_black from "@assets/companies/gitbutler-logo-black.svg";
+import electronic_arts_black from "@assets/companies/ea-wordmark-black.svg";
+import electronic_arts_white from "@assets/companies/ea-wordmark-white.svg";
 
 const logos = [
   {
@@ -28,7 +29,7 @@ const logos = [
     lightMode: openai_black,
     href: "https://github.com/openai/codex",
     aria: "OpenAI",
-    class: "h-[55px] max-xl:h-[40px] max-sm:h-[30px]",
+    class: "h-[55px] max-xl:h-[40px] max-sm:h-[30px] ml-[-8px]",
   },
   {
     darkMode: ovhcloud,
@@ -52,8 +53,8 @@ const logos = [
     class: "h-[23px] max-xl:h-[18px] max-sm:h-[15px] mt-1 dark:mt-5",
   },
   {
-    darkMode: electronic_arts,
-    lightMode: electronic_arts,
+    darkMode: electronic_arts_white,
+    lightMode: electronic_arts_black,
     href: "https://github.com/electronicarts/helmci",
     aria: "Electronic Arts",
     class: "h-[30px] max-xl:h-[25px] max-sm:h-[20px] ml-2",
@@ -77,7 +78,7 @@ const logos = [
     lightMode: gitbutler_black,
     href: "https://github.com/gitbutlerapp/gitbutler",
     aria: "Git Butler",
-    class: "h-[30px] max-xl:h-[25px] max-sm:h-[18px]",
+    class: "h-[28px] max-xl:h-[22px] max-sm:h-[16px]",
   },
 ];
 ---
@@ -87,7 +88,7 @@ const logos = [
     <b>Powering industry leaders:</b>
   </p>
   <div
-    class="justify-left m-0 ml-[-12px] flex flex-wrap items-center gap-8 p-0 max-xl:justify-center max-2xl:gap-6 max-lg:gap-4 max-sm:gap-3"
+    class="justify-left m-0 ml-[-12px] flex flex-wrap items-center gap-8 p-0 max-2xl:gap-6 max-xl:justify-center max-lg:gap-4 max-sm:gap-3"
   >
     {
       logos.map((logo) => (
