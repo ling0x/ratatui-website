@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratzilla Demo</title>
+    <style>
+      body {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: #121212;
+      }
+      pre {
+        font-family: "Fira Code", monospace;
+        font-size: 16px;
+        margin: 0px;
+      }
+    </style>
+  <link rel="modulepreload" href="/demo-661f5128e4536a60.js" crossorigin="anonymous" integrity="sha384-n0+OqrsXFa5RcpY56O/xZB//cYLPJEQpe9oitddRsXQWcFMaos8yW9jIm071qvkE"><link rel="preload" href="/demo-661f5128e4536a60_bg.wasm" crossorigin="anonymous" integrity="sha384-kwRXncAl0xFRmtUkM39mtdy6zGZdSeOF8UveKtY4CzYTy4tX78HRC0eAnkK2t6ks" as="fetch" type="application/wasm"></head>
+  <body>
+<script type="module">
+import init, * as bindings from '/demo-661f5128e4536a60.js';
+const wasm = await init({ module_or_path: '/demo-661f5128e4536a60_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>

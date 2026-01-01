@@ -1,0 +1,32 @@
+---
+// RatzillaDemo.astro
+---
+
+<div class="ratzilla-demo-container">
+  <div id="ratzilla-demo"></div>
+</div>
+
+<script type="module">
+  const init = await import(/* @vite-ignore */ "/ratzilla-demo/demo-661f5128e4536a60.js").then(
+    (m) => m.default,
+  );
+  const wasm = await init("/ratzilla-demo/demo-661f5128e4536a60_bg.wasm");
+  dispatchEvent(new CustomEvent("TrunkApplicationStarted", { detail: { wasm } }));
+</script>
+
+<style>
+  .ratzilla-demo-container {
+    border: 1px solid grey;
+  }
+
+  #ratzilla-demo {
+    width: 100%;
+    height: 420px;
+  }
+
+  #ratzilla-demo pre {
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    margin: 0px;
+  }
+</style>
