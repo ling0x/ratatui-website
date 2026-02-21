@@ -22,6 +22,11 @@ pnpm install && pnpm dev
 > the heavy Chromium bundle by hitting Ctrl+C once that download starts if you do not plan to run
 > the end-to-end tests.
 
+> [!TIP]
+> If you encounter `Cannot find module 'shiki'` errors with pnpm, use `npm install && npm run dev`
+> instead. pnpm's strict dependency isolation prevents components from accessing transitive
+> dependencies not explicitly listed in `package.json`.
+
 ## Commands
 
 - Website (Astro/Starlight):
