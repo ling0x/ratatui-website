@@ -1,6 +1,6 @@
 ---
 import { readFile } from "fs/promises";
-import { codeToHtml } from "shiki";
+import { getCachedHighlighter } from "astro/components/shiki.js";
 import RatatuiVersion from "./RatatuiVersion.astro";
 import CopyButton from "./CopyButton.astro";
 
@@ -14,8 +14,15 @@ const { lang = "rust", class: className = "" } = Astro.props;
 // Read file at build time
 const code = await readFile("./code/tutorials/quickstart-ratatui/src/main.rs", "utf-8");
 
+// Get Astro's cached Shiki highlighter
+const highlighter = await getCachedHighlighter({
+  langs: [lang],
+  themes: ["night-owl"],
+  theme: "night-owl",
+});
+
 // Pre-render syntax highlighted HTML with Night Owl theme
-const highlightedHtml = await codeToHtml(code, {
+const highlightedHtml = highlighter.codeToHtml(code, {
   lang: lang,
   theme: "night-owl",
 });
