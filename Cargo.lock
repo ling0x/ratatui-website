@@ -589,8 +589,8 @@ checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
 name = "counter-app-basic"
 version = "0.0.0"
 dependencies = [
- "crossterm 0.28.1",
- "ratatui 0.29.0",
+ "crossterm 0.29.0",
+ "ratatui 0.30.0",
 ]
 
 [[package]]
@@ -1314,8 +1314,8 @@ name = "hello-ratatui"
 version = "0.1.0"
 dependencies = [
  "color-eyre",
- "crossterm 0.28.1",
- "ratatui 0.29.0",
+ "crossterm 0.29.0",
+ "ratatui 0.30.0",
 ]
 
 [[package]]
@@ -3147,9 +3147,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.23.20"
+version = "0.23.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5065c3f250cbd332cd894be57c40fa52387247659b14a2d6041d121547903b1b"
+checksum = "47796c98c480fce5406ef69d1c76378375492c3b0a0de587be0c1d9feb12f395"
 dependencies = [
  "log",
  "once_cell",
